@@ -8,7 +8,7 @@ from .permissions import IsOwnerOrReadOnly
 # Create your views here.
 
 # ListAPIView
-class MoviesList(generics.ListAPIView):
+class MoviesList(generics.ListCreateAPIView):
     queryset = Movies.objects.all()
     serializer_class = MovieSerializer
     permission_classes = [IsAuthenticated]
